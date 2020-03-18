@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description"
-    content="This page provides a quick how to install Ubuntu on Windows and subsequently use that to compile C++-code.">
+  <meta name="description" content="This page provides a quick how to install Ubuntu on Windows and subsequently use that to compile C++-code." />
   <meta name="author" content="Gerrit-Jan de Bruin" />
 
   <title>How to install Ubuntu on Windows</title>
@@ -19,10 +18,10 @@
     .step p {padding: 0 3rem;}
     code {color: black;}
     .step a, .final a {color: black;}
-    .alert{margin-top:1rem; display: inline-block;}
+    .alert {margin-top:1rem; display: inline-block;}
     .final div {border: 1px solid black; border-radius: 1rem; flex: 40% 1 1; margin: 1rem 5%; padding: 0 1rem;}
     .step {background-color: #6c757d;border-radius: 2rem;padding: 1rem 1rem;text-align: center;margin: 1rem 0;}
-    .final{padding: 1rem 3rem;text-align: center;margin: 1rem 0;border-color:black;color: #6c757d;}
+    .final {padding: 1rem 3rem;text-align: center;margin: 1rem 0;border-color:black;color: #6c757d;}
     .step img {border-radius: 1rem;max-width: 500px;width: 100%;}
     .jumbotron * a {color: rgba(255, 255, 255, .5)}
     .jumbotron * img {padding-bottom: .5rem; float: right; max-width: 100%; height: auto;}
@@ -31,8 +30,6 @@
       .step{border-radius: 5rem; padding: 1rem 3rem;}
       .alert{padding: .25rem .25rem;}
     }
-
-
   </style>
 </head>
 
@@ -42,8 +39,7 @@
       <div class="row">
         <div class="col-md-8">
           <h1>How to install Ubuntu on Windows</h1>
-          <p class="lead my-3 text-justify">This guideline is intended for first year students following the course <a href="http://liacs.leidenuniv.nl/~kosterswa/pm/" target="_blank">"Programmeermethoden"</a> at <a href="https://www.universiteitleiden.nl/" target="_blank">Leiden University</a>. In this course programming in C++ is tought. Students bringing in a Windows 10 laptop, previously used mostly Codeblocks to compile C++ code. In my experience, the g++ compiler in a Windows Subsystem for Linux (WSL) environment provides more clear warnings and errors. Additionally, working in a UNIX-environment make it easier to troubleshoot some frequently encountered
-            errors.</p>
+          <p class="lead my-3 text-justify">This guideline is intended for first year students following the course <a href="http://liacs.leidenuniv.nl/~kosterswa/pm/" target="_blank">"Programmeermethoden"</a> at <a href="https://www.universiteitleiden.nl/" target="_blank">Leiden University</a>. In this course programming in C++ is tought. Students bringing in a Windows 10 laptop, previously used mostly Codeblocks to compile C++ code. In my experience, the g++ compiler in a Windows Subsystem for Linux (WSL) environment provides more clear warnings and errors. Additionally, working in a UNIX-environment make it easier to troubleshoot some frequently encountered errors.</p>
         </div>
         <div class="col-md-4 d-flex flex-wrap align-items-center">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Windows_10_Logo.svg/1920px-Windows_10_Logo.svg.png" />
@@ -57,18 +53,18 @@
 
     <div class="step">
       <h1>Step 1: Make sure that Windows is up-to-date.</h1>
-      <p>Install all updates available in Windows Updates (Settings -> Update & Security).Make sure that at least Build 16215 is installed.You can check your OS build in Settings -> System -> About.</p>
+      <p>Install all updates available in Windows Updates (Settings → Update & Security).Make sure that at least Build 16215 is installed. You can check your OS build in Settings → System → About.</p>
     </div>
 
     <div class="step">
       <h1>Step 2: Install Windows Subsystem for Linux</h1>
-      <p>Windows Subsystem for Linux is available as Windows Feature. Please go to Control Panel -> Programs -> Turn Windows features on or off. You need to have Administrator rights to enter Windows Features. Enable in this window the Windows Subsystem for Linux and press OK. Windows will asks to restart your computer when finished.</p>
+      <p>Windows Subsystem for Linux is available as Windows Feature. Please go to Control Panel → Programs → Turn Windows features on or off. You need to have Administrator rights to enter Windows Features. Enable in this window the Windows Subsystem for Linux and press OK. Windows will asks to restart your computer when finished.</p>
       <a href="images/step-2.webp" target="_blank"><img src="images/step-2.webp" /></a>
     </div>
 
     <div class="step">
       <h1>Step 3: Install a Linux distribution</h1>
-      <p>A Linux distribution can be installed using Microsoft Store. The most convenient solution is usually <a href="https://ubuntu.com/" target="_blank">Ubuntu</a>. Install either by clicking <a href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab" target="_blank">here</a> or go to Microsoft Store -> Search -> Ubuntu. Possibly, Windows asks for Microsoft credentials (sometimes even twice, both for downloading and installing). You can just close this window.</p>
+      <p>A Linux distribution can be installed using Microsoft Store. The most convenient solution is usually <a href="https://ubuntu.com/" target="_blank">Ubuntu</a>. Install either by clicking <a href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab" target="_blank">here</a> or go to Microsoft Store → Search → Ubuntu. Possibly, Windows asks for Microsoft credentials (sometimes even twice, both for downloading and installing). You can just close this window.</p>
       <a href="images/step-3.webp" target="_blank"><img src="images/step-3.webp" /></a>
     </div>
 
@@ -88,9 +84,9 @@
           <kbd>sudo apt install g++</kbd>
         </div>
       </p>
-      <a href="images/step-5.webp" target="_blank"><img src="images/step-5.jpg" /></a>
+      <a href="images/step-5.webp" target="_blank"><img src="images/step-5.webp" /></a>
       <div class="alert alert-light">If you have some time available, this is a good moment to update all the installed packages by launching <kbd>sudo apt upgrade</kbd>.</div>
-      <div class="alert alert-light">If you are a student of "Programmeermethoden", I suggest you read the <a href="http://liacs.leidenuniv.nl/~kosterswa/pm/osdic.pdf" target="_blank" />syllabus</a> now.</div>
+      <div class="alert alert-light">If you are a student of "Programmeermethoden", I suggest you read the <a href="http://liacs.leidenuniv.nl/~kosterswa/pm/osdic.pdf" target="_blank">syllabus</a> now.</div>
     </div>
 
     <div class="step">
