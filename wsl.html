@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164499287-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-164499287-3', {'anonymize_ip': true});
+  </script>
+  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="This page provides a quick how to install Ubuntu on Windows and subsequently use that to compile C++-code." />
@@ -42,14 +52,14 @@
           <p class="lead my-3 text-justify">This guideline is intended for first year students following the course <a href="http://liacs.leidenuniv.nl/~kosterswa/pm/" target="_blank">"Programmeermethoden"</a> at <a href="https://www.universiteitleiden.nl/" target="_blank">Leiden University</a>. In this course programming in C++ is tought. Students bringing in a Windows 10 laptop, previously used mostly Codeblocks to compile C++ code. In my experience, the g++ compiler in a Windows Subsystem for Linux (WSL) environment provides more clear warnings and errors. Additionally, working in a UNIX-environment make it easier to troubleshoot some frequently encountered errors.</p>
         </div>
         <div class="col-md-4 d-flex flex-wrap align-items-center">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Windows_10_Logo.svg/1920px-Windows_10_Logo.svg.png" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo-ubuntu_no%28r%29-black_orange-hex.svg/1920px-Logo-ubuntu_no%28r%29-black_orange-hex.svg.png" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Windows_10_Logo.svg/1920px-Windows_10_Logo.svg.png" alt="windows 10"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo-ubuntu_no%28r%29-black_orange-hex.svg/1920px-Logo-ubuntu_no%28r%29-black_orange-hex.svg.png" alt="ubuntu"/>
         </div>
       </div>
     </div>
   </div>
 
-  <main role="main" class="container">
+  <main class="container">
 
     <div class="step">
       <h1>Step 1: Make sure that Windows is up-to-date.</h1>
@@ -59,19 +69,19 @@
     <div class="step">
       <h1>Step 2: Install Windows Subsystem for Linux</h1>
       <p>Windows Subsystem for Linux is available as Windows Feature. Please go to Control Panel → Programs → Turn Windows features on or off. You need to have Administrator rights to enter Windows Features. Enable in this window the Windows Subsystem for Linux and press OK. Windows will asks to restart your computer when finished.</p>
-      <a href="images/wsl-step2.webp" target="_blank"><img src="images/wsl-step2.webp" /></a>
+      <a href="images/wsl-step2.webp" target="_blank"><img src="images/wsl-step2.webp" alt="turn wsl on"/></a>
     </div>
 
     <div class="step">
       <h1>Step 3: Install a Linux distribution</h1>
       <p>A Linux distribution can be installed using Microsoft Store. The most convenient solution is usually <a href="https://ubuntu.com/" target="_blank">Ubuntu</a>. Install either by clicking <a href="https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab" target="_blank">here</a> or go to Microsoft Store → Search → Ubuntu. Possibly, Windows asks for Microsoft credentials (sometimes even twice, both for downloading and installing). You can just close this window.</p>
-      <a href="images/wsl-step3.webp" target="_blank"><img src="images/wsl-step3.webp" /></a>
+      <a href="images/wsl-step3.webp" target="_blank"><img src="images/wsl-step3.webp" alt="download ubuntu from play store"/></a>
     </div>
 
     <div class="step">
       <h1>Step 4: Set-up of Linux distribution</h1>
       <p>Please open the just installed app now. Some last installing is usually done at this moment. Usually, this last for at most one or two minutes. When done, Ubuntu will ask for a username. Note that this username can only contain lower alphabetical characters. Subsequently, Ubuntu will ask for a password. Type the password. Note that altough you do not see your typed characters, the system is recording them! Confirm your password with Enter.</p>
-      <a href="images/wsl-step4.webp" target="_blank"><img src="images/wsl-step4.webp" /></a>
+      <a href="images/wsl-step4.webp" target="_blank"><img src="images/wsl-step4.webp" alt="choose username in ubuntu terminal" /></a>
     </div>
 
     <div class="step">
@@ -79,12 +89,12 @@
       <p>
         Run the following code to install g++. This needs to be done only once. Note that you need to type in your password after each command and need to confirm the installation by pressing
           <kbd>y</kbd>.<br />
-        <div class="display-block my-3">
+        <span class="display-block my-3">
           <kbd>sudo apt update</kbd><br />
           <kbd>sudo apt install g++</kbd>
-        </div>
+        </span>
       </p>
-      <a href="images/wsl-step5.webp" target="_blank"><img src="images/wsl-step5.webp" /></a>
+      <a href="images/wsl-step5.webp" target="_blank"><img src="images/wsl-step5.webp" alt="install g++"/></a>
       <div class="alert alert-light">If you have some time available, this is a good moment to update all the installed packages by launching <kbd>sudo apt upgrade</kbd>.</div>
       <div class="alert alert-light">If you are a student of "Programmeermethoden", I suggest you read the <a href="http://liacs.leidenuniv.nl/~kosterswa/pm/osdic.pdf" target="_blank">syllabus</a> now.</div>
     </div>
@@ -107,9 +117,7 @@
     <div class="row final">
       <div>
         <h1>Questions?</h1>
-        <p>
-          Don't hesitate to <a href="mailto:g.j.de.bruin@liacs.leidenuniv.nl?subject=question about Linux on Windows">e-mail me</a> or ask at the practical sessions of the course "Programmeermethoden".
-        </p>
+        <p>Don't hesitate to <a href="mailto:g.j.de.bruin@liacs.leidenuniv.nl?subject=question%20about%20Linux%20on%20Windows">e-mail me</a> or ask at the practical sessions of the course "Programmeermethoden".</p>
       </div>
 
       <div>

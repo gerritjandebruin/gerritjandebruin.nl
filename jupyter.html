@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164499287-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-164499287-3', {'anonymize_ip': true});
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="This page provides a quick how to install Jupyter Notebook on Windows using conda." />
@@ -16,7 +26,7 @@
     header p {flex: 0 0 66.66667%; margin-bottom: 1rem;  padding: 0 1rem; box-sizing: border-box;}
     header p:first-of-type {font-size: 1.25rem; font-weight:300; line-height: 1.5;}
     header img {flex: 0 0 33.33333%; max-width:33%; max-height: 5rem; object-fit: contain; box-sizing: border-box;}
-    header code {color: white;}
+    header .code {color: white;}
 
     main, footer {text-align:center;}
     main > div {background-color: grey; padding: 1rem 1rem; margin: 1rem 0;}
@@ -26,9 +36,9 @@
     main a:hover, footer a:hover {text-decoration: underline;}
     main a:hover{color: white; }
     main img {max-width: 500px; width: 100%; max-height:10rem; object-fit:contain;}
-    main code {color: black;}
-    main code comment {color: rgb(50, 50, 50);}
-    main code system {color: darkgreen;}
+    main .code {color: black;}
+    main .code comment {color: rgb(50, 50, 50);}
+    main .code system {color: darkgreen;}
 
     .btn {background-color: darkslategray; padding: 1rem; width: auto; display: inline-block; color: white;}
 
@@ -41,29 +51,29 @@
     <h1>How to install Jupyter on Windows</h1>
 
     <p>This guideline intends to help students install Jupyter Notebook on their Windows PC in an easy way. Usually it is easier to troubleshoot problems when a UNIX system is used. Windows users may wish to install Windows Subsystem for Linux for these purposes. A guideline on how to do this will be added later.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Windows_10_Logo.svg/1920px-Windows_10_Logo.svg.png" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Windows_10_Logo.svg/1920px-Windows_10_Logo.svg.png" alt="windows 10"/>
 
     <h2>Terminology</h2>
     <p><b>Python</b> - Programming language created by Guido van Rossum. The syntax aims to be readable. Because a lot of science packages are available for Python, it is a popular language used by scientists in all kind of disciplines. The most notable of these packages are Pandas, Numpy and Scikit-learn.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/486px-Python_logo_and_wordmark.svg.png" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/486px-Python_logo_and_wordmark.svg.png" alt="python"/>
 
     <p><b>Jupyter Notebook</b> - This is one of the many <abbr title="Integrated Development Environment">IDE</abbr> that are available for Python. Specific for Jupyter Notebooks is that you can create reports with it at ease, since you can combine code with text and images. These reports are stored as <code>.ipynb</code> files.</p>
-    <img src="https://jupyter.org/assets/nav_logo.svg" />
+    <img src="https://jupyter.org/assets/nav_logo.svg" alt="jupyter" />
 
     <p><b>Anaconda</b> - As explained, Python has become one of the major programming languages because many packages are available. Anaconda allows to automate the installing of dependencies and the updating of packages. An additional advantage of Anaconda is that it will create its own virtual environment and hence will not mess with any system-installed Python version.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" />
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" alt="anaconda" />
 
     <p><b>Numpy</b> - Python package that provides convenient functions that deal with (multi-dimensional) arrays.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/NumPy_logo.svg/1920px-NumPy_logo.svg.png" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/NumPy_logo.svg/1920px-NumPy_logo.svg.png" alt="numpy" />
 
     <p><b>Pandas</b> - Python package that provides convenient functions that deal with tabular data. Largest difference with Numpy is that it allows to have indices on the axis.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1920px-Pandas_logo.svg.png" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1920px-Pandas_logo.svg.png" alt="pandas" />
 
     <p><b>Scikit-learn</b> - Python package that allows to do machine learning.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn"/>
   </header>
 
-  <main role="main">
+  <main>
 
     <div>
       <h1>Step 1: Download and install Anaconda</h1>
@@ -78,22 +88,22 @@
     <div>
       <h1>Step 3: Create a new jupyter notebook</h1>
       <p>Navigate to the folder where you want to create the notebook. Create the new notebook. A new file with the extension .ipynb should be added. Open this notebook by clicking on it.</p>
-      <a href="images/jupyter-step3.PNG" target="_blank"><img src="images/jupyter-step3.PNG" /></a>
+      <a href="images/jupyter-step3.PNG" target="_blank"><img src="images/jupyter-step3.PNG" alt="create a new ipynb notebook"/></a>
     </div>
 
     <div>
       <h1>Step 4: Try</h1>
       <p>You can now run Python in the Jupyter Notebook! Play around a little. Try some additions (<code>3+3</code>) and check the result by executing the cell (can be done with shift enter). If at this stage you get a Kernel Error, close Jupyter Notebook (both the browser and terminal) and reopen it with administrator rights.</p>
-      <a href="images/jupyter-step4.PNG" target="_blank"><img src="images/jupyter-step4.PNG" /></a>
+      <a href="images/jupyter-step4.PNG" target="_blank"><img src="images/jupyter-step4.PNG" alt="some example in jupyter notebook"/></a>
     </div>
 
     <div>
       <h1>Step 5: Check installed modules</h1>
       <p>Check which modules are installed. This can be done by executing the following code:
-        <code style="display:block;">
+        <div class="code">
           <system>import</system> pandas <system>as</system> pd <comment># Load the pandas module.</comment><br />
           <system>import</system> sklearn <comment># Load the scikit-learn module.</comment>
-        </code>
+        </div>
       </p>
       <p>If some package is not installed, you can open Start → Anaconda prompt (possibly with admin rights) and then type <code>conda install ...</code>. The dots should be replaced by the package name. Jupyter Notebook should be reopened after installing new modules.</p>
     </div>
@@ -107,7 +117,7 @@
 
   <footer>
     <h1>Questions?</h1>
-    <p>Don't hesitate to <a href="mailto:g.j.de.bruin@liacs.leidenuniv.nl?subject=question about Anaconda on Windows">e-mail me</a>.</p>
+    <p>Don't hesitate to <a href="mailto:g.j.de.bruin@liacs.leidenuniv.nl?subject=question%20about%20Anaconda%20on%20Windows">e-mail me</a>.</p>
   </footer>
 
 </body>
