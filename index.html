@@ -13,10 +13,14 @@
 
   <title>Gerrit-Jan de Bruin</title>
 
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <link rel="canonical" href="https://gerritjandebruin.nl/" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet" />
+  
+  	<!-- Font Awesome icons (free version)-->
+	<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
   <style>
     .text-white a {color: white;}
     .fig-caption {font-size: 10px;}
@@ -28,6 +32,11 @@
     h6 {margin: 1rem 0 0 0;}
     hr {margin: 1rem 0 1rem 0;}
     .material-icons, .logo {vertical-align: middle; margin-right: .25rem; width: 24px;}
+    .social-icons .social-icon {display: inline-flex; align-items: center; justify-content: center; height: 2.5rem; width: 2.5rem; background-color: #495057; color: #fff; border-radius: 100%; font-size: 1.5rem; margin-right: 1.5rem;}
+    .social-icons .social-icon:last-child {margin-right: 0;}
+    .social-icons .social-icon:hover {background-color: #bd5d38;}
+    .fa-scholar {content: url('images/google-scholar.svg'); height: 1em; width: auto;} /* Source: https://github.com/FortAwesome/Font-Awesome/issues/541 */
+    .fa-lu {content: url('images/UL-wo-padding.svg'); height: 1em; width: auto;}
   </style>
 
   <!-- Matomo -->
@@ -37,7 +46,7 @@
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
-      var u="//analytics.gerritjandebruin.nl/";
+      var u="https://analytics.gerritjandebruin.nl/";
       _paq.push(['setTrackerUrl', u+'matomo.php']);
       _paq.push(['setSiteId', '2']);
       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -65,13 +74,22 @@
     <div class="row">
       <div class="col-lg-8 main-content">
 
+        <h3>Experimental Evaluation of Train and Test Split Strategies in Link Prediction</h3>
+        <p>December 2020</p>
+        <div class="row">
+          <div class="col-md-8"><img class="img-fluid m-2" src="images/cn2020.svg" alt="Splits in link prediction." /></div>
+          <div class="col-md-4 align-self-center">
+            <p class="text-justify">At the Complex Networks 2020 conference, which was unfortunately completely online, I shared my latest work on different train/ test splitting strategies in link prediction.</p>
+          </div>
+        </div>
+
         <h3>European Sailing Network</h3>
         <p>July 2020</p>
         <div class="row">
           <div class="col-md-4"><img class="img-fluid m-2" src="images/nathalie.png" alt="Communities of ports in Europe." /></div>
           <div class="col-md-8 align-self-center">
             <p class="text-justify">
-              Nathlie van Veen finished her MSc thesis at the Human Environment and Transport Inspectorate.
+              Nathalie van Veen finished her MSc thesis at the Human Environment and Transport Inspectorate.
               In her work, she uses tools from the network science domain to get a better understanding of movements of large ships in Europe.
               She presented her work very well both for an academic public as well for inspectors at the Human Environment and Transport Inspectorate.
             </p>
@@ -82,7 +100,7 @@
         <h3>Understanding Dynamics of Truck Co-Driving Networks</h3>
         <p>December 2019</p>
         <img class="img-fluid m-2" src="images/approach.svg" alt="Approach to undertand truck co-driving networks." />
-        <p class="text-justify">At the Complex Networks 2019 conference, I will present a link prediction approach to understanding dynamics in truck co-driving networks.</p>
+        <p class="text-justify">At the Complex Networks 2019 conference, I presented a link prediction approach to understanding dynamics in truck co-driving networks.</p>
         <a href="https://github.com/gerritjandebruin/truck-codriving" target="_blank"><img class="logo" src="images/github.png" alt="github" />gerritjandebruin/truck-codriving</a>
 
         <h3>Detection of Suspicious Behaviour from Ship Transponder Data</h3>
@@ -162,6 +180,23 @@
       </div>
 
       <aside class="col-lg-4 blog-sidebar mt-4 p-2 bg-light rounded text-center">
+
+        <div class="contact-links">
+          <a class="btn btn-sm d-block" href="./cv.html" target="_blank"><i class="material-icons">open_in_new</i>Curriculum Vitae</a>
+
+          <hr />
+
+          <div class="social-icons">
+            <a class="social-icon" href="https://www.gerritjandebruin.nl/linkedin.com/in/gerrit-jan"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="https://github.com/gerritjandebruin"><i class="fab fa-github"></i></a>
+            <a class="social-icon" href="https://orcid.org/0000-0003-4936-879X"><i class="fab fa-orcid"></i></a>
+            <a class="social-icon" href="https://scholar.google.nl/citations?user=9R_NScgAAAAJ"><i class="fa-scholar fa-1x"></i></a>
+            <a class="social-icon" href="https://www.universiteitleiden.nl/en/staffmembers/gerrit-jan-de-bruin"><i class="fa-lu fa-1x"></i></a>
+          </div>
+        </div>
+
+        <hr />
+
         <h4>Contact</h4>
 
         <h6>Leiden University</h6>
@@ -171,21 +206,9 @@
         <h6>Ministry of Infrastructure and Water Management</h6>
         <i class="material-icons">email</i><a href="mailto:gerritjan.de.bruin@ilent.nl">gerritjan.de.bruin@ilent.nl</a>
 
-        <hr>
+        <hr />
 
-        <div class="contact-links">
-          <a class="btn btn-sm d-block" href="./cv.html" target="_blank"><i class="material-icons">open_in_new</i>CV</a>
-          <a class="btn btn-sm d-block" href="https://www.universiteitleiden.nl/en/staffmembers/gerrit-jan-de-bruin" target="_blank">
-            <i class="material-icons">open_in_new</i>Leiden University
-          </a>
-          <a class="btn btn-sm d-block" href="https://orcid.org/0000-0003-4936-879X" target="_blank"><img class="logo" src="images/orcid.webp" alt="orcid" />0000-0003-4936-879X</a>
-          <a class="btn btn-sm d-block" href="https://github.com/gerritjandebruin" target="_blank"><img class="logo" src="images/github.png" alt="github" />gerritjandebruin</a>
-          <a class="btn btn-sm d-block" href="linkedin.com/in/gerrit-jan" target="_blank"><i class="material-icons">open_in_new</i>LinkedIn</a>
-        </div>
-
-        <hr>
-
-        <h4>Teaching</h4>
+        <!-- <h4>Teaching</h4>
 
         <a href="http://liacs.leidenuniv.nl/~takesfw/BIPM/" target="_blank">Data Science and Process Modelling</a>
         <p class="mt-0 mb-1">(2018-2020)</p>
@@ -197,11 +220,11 @@
         <p class="m-0"><a href="attachments/nathalie.pdf" target="_blank">Nathalie van Veen</a></p>
         <h5>Bachelor thesis supervision</h5>
         <p class="m-0"><a href="https://theses.liacs.nl/1550" target="_blank">Heleen van Sonsbeek</a></p>
-        <p class="m-0"><a href="attachments/michael.pdf" target="_blank">Michael Bosch</a></p>
+        <p class="m-0"><a href="attachments/michael.pdf" target="_blank">Michael Bosch</a></p> -->
 
-        <hr>
+        <!-- <hr> -->
 
-        <h4>Leiden University</h4>
+        <!-- <h4>Leiden University</h4>
         <img src="images/UL.svg" class="img-fluid px-1" alt="logo Leiden University" />
         <p class="m-0">I work as PhD-candidate at <a href="https://liacs.leidenuniv.nl/" target="_blank">the Leiden Institute of Advanced Computer Science</a>.</p>
 
@@ -215,7 +238,7 @@
           (link in Dutch) at <a href="https://ilent.nl" target="_blank">the Human Environment and Transport Inspectorate</a>.
         </p>
 
-        <hr>
+        <hr> -->
 
         <h4>Supervisors</h4>
         <p class="m-0"><a href="https://universiteitleiden.nl/en/staffmembers/jaap-van-den-herik" target="_blank">Prof. dr. H.J. van den Herik</a></p>
