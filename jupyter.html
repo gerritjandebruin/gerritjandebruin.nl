@@ -22,17 +22,16 @@
     main > div {background-color: grey; padding: 1rem 1rem; margin: 1rem 0;}
     main h1 {margin: 0 1rem;}
     main p {padding: 0 3rem;}
-    main a, footer a {color: black; text-decoration: none;}
+    main a, footer a {color: white; text-decoration: none;}
     main a:hover, footer a:hover {text-decoration: underline;}
     main a:hover{color: white; }
     main img {max-width: 500px; width: 100%; max-height:10rem; object-fit:contain;}
-    main .code {color: black;}
-    main .code comment {color: rgb(50, 50, 50);}
-    main .code system {color: darkgreen;}
+    main kbd {white-space: nowrap; padding: .2rem .4rem; color: white; background-color: #212529; border-radius: .2rem;}
 
     .btn {background-color: darkslategray; padding: 1rem; width: auto; display: inline-block; color: white;}
 
     footer {padding: 1rem 3rem; margin: 1rem 0; border-color:black; color: #6c757d; border: 1px solid black; }
+    footer a {color: black;}
   </style>
 
   <!-- Matomo -->
@@ -56,18 +55,20 @@
 <body>
   <header>
     <h1>How to install Jupyter on Windows</h1>
-
-    <p>This guideline intends to help students install Jupyter Notebook on their Windows PC in an easy way. Usually it is easier to troubleshoot problems when a UNIX system is used. Windows users may wish to install Windows Subsystem for Linux for these purposes. A guideline on how to do this will be added later.</p>
+    <p>This guideline intends to help students install Jupyter on their Windows PC in an easy way. Usually it is easier to troubleshoot problems when a UNIX system is used. Windows users may wish to install Windows Subsystem for Linux for these purposes. A guideline on how to do this will be added later.</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Windows_10_Logo.svg/1920px-Windows_10_Logo.svg.png" alt="windows 10"/>
-
+    
     <h2>Terminology</h2>
+    <p><b>WSL</b> - The Windows Subsystem for Linux is a virtual machine that runs within Windows and allows to setup Linux systems. It is far better integrated in Windows than traditional virtual machines.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo-ubuntu_no%28r%29-black_orange-hex.svg/1920px-Logo-ubuntu_no%28r%29-black_orange-hex.svg.png" alt="windows 10"/>
+
     <p><b>Python</b> - Programming language created by Guido van Rossum. The syntax aims to be readable. Because a lot of science packages are available for Python, it is a popular language used by scientists in all kind of disciplines. The most notable of these packages are Pandas, Numpy and Scikit-learn.</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/486px-Python_logo_and_wordmark.svg.png" alt="python"/>
 
-    <p><b>Jupyter Notebook</b> - This is one of the many <abbr title="Integrated Development Environment">IDE</abbr> that are available for Python. Specific for Jupyter Notebooks is that you can create reports with it at ease, since you can combine code with text and images. These reports are stored as <code>.ipynb</code> files.</p>
+    <p><b>Jupyter Notebook</b> - This is one of the many <abbr title="Integrated Development Environment">IDE</abbr> that are available for Python. Specific for Jupyter Notebooks is that you can create reports with it at ease, since you can combine code with text and images. These reports are stored as <code>.ipynb</code> files. Jupyter Lab is very alike Jupyter Notebook.</p>
     <img src="https://jupyter.org/assets/nav_logo.svg" alt="jupyter" />
 
-    <p><b>Anaconda</b> - As explained, Python has become one of the major programming languages because many packages are available. Anaconda allows to automate the installing of dependencies and the updating of packages. An additional advantage of Anaconda is that it will create its own virtual environment and hence will not mess with any system-installed Python version.</p>
+    <p><b>Anaconda (Miniconda)</b> - As explained, Python has become one of the major programming languages because many packages are available. Anaconda allows to automate the installing of dependencies and the updating of packages. An additional advantage of Anaconda is that it will create its own virtual environment and hence will not mess with any system-installed Python version. Miniconda is just like Anaconda, but with less packages pre-installed.</p>
     <img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" alt="anaconda" />
 
     <p><b>Numpy</b> - Python package that provides convenient functions that deal with (multi-dimensional) arrays.</p>
@@ -83,40 +84,83 @@
   <main>
 
     <div>
-      <h1>Step 1: Download and install Anaconda</h1>
-      <p>You can download Anaconda at <a href="https://www.anaconda.com/distribution/#download-section">anaconda.com</a>. Choose for the Python 3 version, since 2 is <abbr title="End Of Life">EOL</abbr>. When downloading is done, you can run the installer and leave every option to the default value.</p>
+      <h1>Step 1: Make sure Windows is up-to-date.</h1>
+      <p>Go to Windows Update and make sure all updates are installed. At the bottom of the Windows Update page, you can check your OS build and System Info. Make sure that you are on Build 18362 or higher.</p>
     </div>
 
     <div>
-      <h1>Step 2: Run Jupyter Notebook</h1>
-      <p>Choose Start → Anaconda3 → Jupyter Notebook. A terminal will start. If there is some error in this terminal, you can try to run Jupyter Notebook with admin privileges by right clicking → More → Run as administrator. When everything went okay, the browser should automatically open at <a href="http://localhost:8888">localhost:8888</a>. If not, please open it yourself.</p>
+      <h1>Step 2: Enable Windows Features</h1>
+      <p>Go to Control Panel (e.g. by typing control panel in start menu) -> Programs -> Turn Windows features on or off -> Enable "Windows Subsystem for Linux" and "Virtual Machine Platform".</p>
     </div>
 
     <div>
-      <h1>Step 3: Create a new jupyter notebook</h1>
+      <h1> Step 3: Restart your machine</h1>
+    </div>
+
+    <div>
+      <h1>Step 4: Download Linux kernel update package</h1>
+      <p>Download <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" download>this</a> file and execute it. Approve elevated permissions.</p>
+    </div>
+
+    <div>
+      <h1>Step 5: Enable WSL 2</h1>
+      <p>Altough this step is not mandatory, it is wise to work on the latest version of WSL 2. Open Command Prompt and type "wsl --set-default-version 2" and enter.</p>
+      <a href="images/wsl-set-default.PNG" target="_blank"><img src="images/wsl-set-default.PNG" alt="Set WSL2 as default"/></a>
+    </div>
+
+    <div>
+      <h1>Step 6: Download Ubuntu</h1>
+      <p>Open Microsoft Store, search for Ubuntu and install it. Otherwise, open <a href="https://www.microsoft.com/store/apps/9n6svws3rx71" target="_blank">this</a> link and install it.</p>
+    </div>
+
+    <div>
+      <h1>Step 7: Create default UNIX user account</h1>
+      <p>Launch the just installed app (Search in start menu for Ubuntu). It will now load Ubuntu; this can take a while. When this is done, you will be asked to create a username and password. There is no need for very sophisticated password, but please remember it! Note: When typing your password, you will not see any character appearing. This is normal and everything works alright. End with an enter.</p>
+    </div>
+
+    <div>
+      <h1>Step 8: Install Miniconda</h1>
+      <p>
+        Now Ubuntu is installed, it is time to update some packages and install Python! Start by downloading Miniconda and install this. You can do this by the following commands, which can be launched in the terminal you obtained from the previous step. You can re-open this terminal anytime by launching the Ubuntu app. When a program is asking for permission, type 'y' or 'yes' and enter. When asking for installation location, just type enter.
+        <div class="code">
+          <kbd>sudo apt update</kbd><br />
+          <kbd>sudo apt upgrade</kbd><br />
+          <kbd>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</kbd><br />
+          <kbd>bash Miniconda3-latest-Linux-x86_64.sh</kbd><br />
+          <kbd>conda init</kbd>
+        </div>
+        Please close and reopen Ubuntu after this step.
+      </p>
+    </div>
+
+    <div>
+      <h1>Step 9: Install some packages</h1>
+      <p>You are likely to use some frequently used packages. With the following command, you will install some frequently used ones.</p>
+      <span class="display-block my-3">
+        <kbd>conda install -y jupyterlab pandas scikit-learn numpy seaborn nodejs</kbd>
+      </span>
+    </div>
+
+    <div>
+      <h1>Step 10: Run jupyterlab</h1>
+      <p>You should now be able to run jupyter lab or notebook! Just type `jupyter lab` or `jupyter notebook`. A URL will display in the terminal, which you can copy paste into a browser. Usually it is something like http://localhost:8888/lab?token=***</p>
+      <a href="images/localhost.PNG" target="_blank"><img src="images/localhost.PNG" alt="Open browser at specific port"/></a>
+    </div>
+
+    <div>
+      <h1>Step 11: Create a new jupyter notebook</h1>
       <p>Navigate to the folder where you want to create the notebook. Create the new notebook. A new file with the extension .ipynb should be added. Open this notebook by clicking on it.</p>
       <a href="images/jupyter-step3.PNG" target="_blank"><img src="images/jupyter-step3.PNG" alt="create a new ipynb notebook"/></a>
     </div>
 
     <div>
-      <h1>Step 4: Try</h1>
+      <h1>Step 12: Try</h1>
       <p>You can now run Python in the Jupyter Notebook! Play around a little. Try some additions (<code>3+3</code>) and check the result by executing the cell (can be done with shift enter). If at this stage you get a Kernel Error, close Jupyter Notebook (both the browser and terminal) and reopen it with administrator rights.</p>
       <a href="images/jupyter-step4.PNG" target="_blank"><img src="images/jupyter-step4.PNG" alt="some example in jupyter notebook"/></a>
     </div>
 
     <div>
-      <h1>Step 5: Check installed modules</h1>
-      <p>Check which modules are installed. This can be done by executing the following code:
-        <div class="code">
-          <system>import</system> pandas <system>as</system> pd <comment># Load the pandas module.</comment><br />
-          <system>import</system> sklearn <comment># Load the scikit-learn module.</comment>
-        </div>
-      </p>
-      <p>If some package is not installed, you can open Start → Anaconda prompt (possibly with admin rights) and then type <code>conda install ...</code>. The dots should be replaced by the package name. Jupyter Notebook should be reopened after installing new modules.</p>
-    </div>
-
-    <div>
-      <h1>Step 6: Do your research!</h1>
+      <h1>Step 13: Do your research!</h1>
       <p>Now you are suited with all tools necessary to do your research. As an example, you can download <a href="attachments/consumer_classification.ipynb" download>here</a> some simple machine learning on sales data from the DSPM course. Save the <code>.ipynb</code> file to a file path to your choice. You can then start Jupyter Notebook and open the notebook file.</p>
       <a class="btn" href="attachments/consumer_classification.ipynb" download>Download Example Jupyter Notebook on Machine Learning</a>
     </div>
@@ -124,7 +168,7 @@
 
   <footer>
     <h1>Questions?</h1>
-    <p>Don't hesitate to <a href="mailto:g.j.de.bruin@liacs.leidenuniv.nl?subject=question%20about%20Anaconda%20on%20Windows">e-mail me</a>.</p>
+    <p>Don't hesitate to <a href="mailto:g.j.de.bruin@liacs.leidenuniv.nl?subject=question%20about%20Miniconda%20on%20Windows">e-mail me</a>.</p>
   </footer>
 
   <!-- Matomo Image Tracker-->
