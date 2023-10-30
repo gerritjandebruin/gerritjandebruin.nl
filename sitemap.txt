@@ -1,3 +1,12 @@
 https://gerritjandebruin.nl
-https://gerritjandebruin.nl/wsl.html
+https://gerritjandebruin.nl/ckan.html
+https://gerritjandebruin.nl/cv.html
+https://gerritjandebruin.nl/dustmonitoring.html
+https://gerritjandebruin.nl/g++.html
+https://gerritjandebruin.nl/ilm2.html
 https://gerritjandebruin.nl/jupyter.html
+https://gerritjandebruin.nl/measurement-van.html
+https://gerritjandebruin.nl/minidoas.html
+https://gerritjandebruin.nl/network-analysis.html
+https://gerritjandebruin.nl/ruisdael.html
+https://gerritjandebruin.nl/ship-emissions.html
