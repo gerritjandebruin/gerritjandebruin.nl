@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.gerritjandebruin.nl/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/ckan.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/dataportaal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/ckan.html"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/measurement-van.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/meetwagen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/measurement-van.html"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/network-analysis.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/netwerk-analyse.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/network-analysis"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/ruisdael-observatory.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/ruisdael-observatorium.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/ruisdael-observatory"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/ship-emissions.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/scheepsemissies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/ship-emissions.html"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/sensor-networks.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/sensor-netwerken.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/sensor-networks.html"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/ammonia-measurements.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/stikstofmetingen.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/ammonia-measurements.html"/>
+  </url>
+  <url>
+    <loc>https://www.gerritjandebruin.nl/dustmonitoring.html</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.gerritjandebruin.nl/nl/stofmonitoring.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gerritjandebruin.nl/dustmonitoring.html"/>
+  </url>
+  <url><loc>https://www.gerritjandebruin.nl/cv.html</loc></url>
+  <url><loc>https://www.gerritjandebruin.nl/g++.html</loc></url>
+  <url><loc>https://www.gerritjandebruin.nl/jupyter.html</loc></url>
+</urlset>
